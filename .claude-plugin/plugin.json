@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "claude-esra",
+  "displayName": "ESRA for Claude Code",
+  "version": "0.1.0",
+  "description": "Bounded, value-aligned self-improvement workflows (ESRA) for Claude Code: five on-demand skills plus a dependency-free local runtime for evidence logs, baselines, experiments, audits, and human-reviewed oversight proposals.",
+  "author": {
+    "name": "your-name",
+    "url": "https://github.com/your-username"
+  },
+  "homepage": "https://github.com/your-username/claude-esra",
+  "repository": "https://github.com/your-username/claude-esra",
+  "license": "MIT",
+  "keywords": ["esra", "claude-code", "agent-skills", "self-improvement", "decision-making", "experiments"],
+  "metadata": {
+    "specification": "https://github.com/rrpauls/esra",
+    "provenanceSource": "https://github.com/rrpauls/hermes-esra",
+    "siblingImplementation": "https://github.com/rrpauls/chatgpt-esra"
+  }
+}
