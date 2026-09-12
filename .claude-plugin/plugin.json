@@ -5,14 +5,16 @@
   "version": "0.1.0",
   "description": "Bounded, value-aligned self-improvement workflows (ESRA) for Claude Code: five on-demand skills plus a dependency-free local runtime for evidence logs, baselines, experiments, audits, and human-reviewed oversight proposals.",
   "author": {
-    "name": "your-name",
-    "url": "https://github.com/your-username"
+    "name": "Robert Pauls",
+    "url": "https://github.com/rrpauls"
   },
-  "homepage": "https://github.com/your-username/claude-esra",
-  "repository": "https://github.com/your-username/claude-esra",
-  "license": "MIT",
+  "homepage": "https://github.com/rrpauls/claude-esra",
+  "repository": "https://github.com/rrpauls/claude-esra",
+  "license": "Apache-2.0",
   "keywords": ["esra", "claude-code", "agent-skills", "self-improvement", "decision-making", "experiments"],
   "metadata": {
+    "esraProtocolVersion": "1.2",
+    "conformanceManifest": "./esra-conformance.json",
     "specification": "https://github.com/rrpauls/esra",
     "provenanceSource": "https://github.com/rrpauls/hermes-esra",
     "siblingImplementation": "https://github.com/rrpauls/chatgpt-esra"

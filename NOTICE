@@ -1,0 +1,11 @@
+ESRA for Claude Code
+Copyright 2026 Robert Pauls
+
+This product includes material adapted from the ESRA specification, the
+Hermes ESRA implementation, and the OpenAI/Codex ESRA adaptation:
+https://github.com/rrpauls/esra
+https://github.com/rrpauls/hermes-esra
+https://github.com/rrpauls/chatgpt-esra
+
+Claude and Claude Code are trademarks of Anthropic, PBC. This independent
+integration is not endorsed or sponsored by Anthropic.

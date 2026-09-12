@@ -1,0 +1,29 @@
+name: Validate plugin
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+      - name: Validate licensing
+        run: |
+          grep -q "Apache License" LICENSE
+          test -s NOTICE
+          grep -q '"license": "Apache-2.0"' .claude-plugin/plugin.json
+          grep -q "Apache-2.0 License" README.md
+          python -m json.tool esra-conformance.json >/dev/null
+          grep -q '"protocol_version": "1.2"' esra-conformance.json
+      - run: python scripts/validate_skills.py
+      - run: python scripts/esra_runtime.py --data-dir /tmp/claude-esra-ci validate skills
+      - run: python -m py_compile scripts/*.py
+      - run: python -m unittest discover -s tests -v

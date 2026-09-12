@@ -23,3 +23,6 @@
    test suite here can't see.
 
 Details and phase plan, once one exists, belong in `ROADMAP.md`.
+
+By submitting a contribution, you agree that it is licensed under the
+Apache License, Version 2.0, without additional terms or conditions.

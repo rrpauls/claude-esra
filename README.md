@@ -11,7 +11,7 @@ its own.
 [Hermes implementation](https://github.com/rrpauls/hermes-esra) ·
 [OpenAI/Codex implementation](https://github.com/rrpauls/chatgpt-esra) ·
 [Hermes parity](docs/HERMES_PARITY.md) · [Runtime guide](docs/RUNTIME.md) ·
-[MIT License](LICENSE)
+[Apache-2.0 License](LICENSE)
 
 ## What this is
 
@@ -29,6 +29,7 @@ plugin manifest, skill discovery, hooks, and permission model end to end.
 | Runtime        | `scripts/esra_runtime.py`                                                               | Triggers, evidence logs, baselines, experiments, audits, oversight artifacts |
 | Lifecycle hook | `hooks/hooks.json`, `scripts/esra_hook.py`                                              | Privacy-preserving session/task counters, no stdout, never blocks    |
 | Manifest       | `.claude-plugin/plugin.json`                                                            | Standard Claude Code plugin metadata and component paths             |
+| Conformance    | `esra-conformance.json`                                                                 | ESRA protocol version and evidence-backed capability maturity         |
 
 See [`docs/HERMES_PARITY.md`](docs/HERMES_PARITY.md) for the full component mapping and
 the specific adaptations this port makes for Claude Code's plugin model, and
@@ -39,7 +40,7 @@ the specific adaptations this port makes for Claude Code's plugin model, and
 Local development / testing, without a marketplace:
 
 ```bash
-git clone https://github.com/your-username/claude-esra.git
+git clone https://github.com/rrpauls/claude-esra.git
 claude --plugin-dir ./claude-esra
 ```
 
@@ -96,7 +97,8 @@ python3 -m unittest discover -s tests -v
 
 ## License
 
-MIT — see [LICENSE](LICENSE). The adapted material retains provenance notices in
+Apache-2.0 — see [LICENSE](LICENSE). Attribution and platform trademark notices
+are recorded in [NOTICE](NOTICE); adapted material retains provenance notices in
 `docs/HERMES_PARITY.md` and in this README.
 
 "Claude" and "Claude Code" are trademarks of Anthropic, PBC. This is an independent,
