@@ -30,6 +30,7 @@ plugin manifest, skill discovery, hooks, and permission model end to end.
 | Lifecycle hook | `hooks/hooks.json`, `scripts/esra_hook.py`                                              | Privacy-preserving session/task counters, no stdout, never blocks    |
 | Manifest       | `.claude-plugin/plugin.json`                                                            | Standard Claude Code plugin metadata and component paths             |
 | Conformance    | `esra-conformance.json`                                                                 | ESRA protocol version and evidence-backed capability maturity         |
+| Portable export | `scripts/esra_export.py`                                                                | Privacy-filtered ESRA 1.2 `cycle-event` JSONL                         |
 
 See [`docs/HERMES_PARITY.md`](docs/HERMES_PARITY.md) for the full component mapping and
 the specific adaptations this port makes for Claude Code's plugin model, and

@@ -1,7 +1,7 @@
 # Claude Code runtime
 
 `scripts/esra_runtime.py` is the dependency-free operational layer behind the five
-skills in this plugin. It is stdlib-only Python 3 (3.9+ for the type-hint syntax used;
+skills in this plugin. It is stdlib-only Python 3 (3.10+ for the type-hint syntax used;
 tested on 3.11) and never shells out to `git`, `gh`, or any package manager.
 
 ## State and privacy
@@ -51,6 +51,18 @@ python3 scripts/esra_runtime.py record \
 
 Store concise evidence pointers only — never secrets, full transcripts, or hidden
 deliberation.
+
+### Portable ESRA 1.2 export
+
+```bash
+python3 scripts/esra_export.py \
+  --data-dir ~/.claude/esra --output /tmp/esra-events.jsonl
+```
+
+The read-only exporter maps legacy runtime records to one
+`cycle-event@1.0.0` object per line. It exports an allowlisted payload and
+omits prompts, transcripts, raw session identifiers, command output, and
+hidden reasoning. Existing runtime files are not modified.
 
 ### Baseline metrics
 

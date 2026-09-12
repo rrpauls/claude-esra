@@ -2,7 +2,7 @@
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "claude-esra",
   "displayName": "ESRA for Claude Code",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Bounded, value-aligned self-improvement workflows (ESRA) for Claude Code: five on-demand skills plus a dependency-free local runtime for evidence logs, baselines, experiments, audits, and human-reviewed oversight proposals.",
   "author": {
     "name": "Robert Pauls",
