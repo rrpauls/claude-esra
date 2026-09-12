@@ -11,14 +11,15 @@ its own.
 [Hermes implementation](https://github.com/rrpauls/hermes-esra) ·
 [OpenAI/Codex implementation](https://github.com/rrpauls/chatgpt-esra) ·
 [Hermes parity](docs/HERMES_PARITY.md) · [Runtime guide](docs/RUNTIME.md) ·
+[Compatibility matrix](https://github.com/rrpauls/esra/blob/main/conformance/compatibility-matrix.json) ·
 [Apache-2.0 License](LICENSE)
 
 ## What this is
 
 ESRA turns "that went well/badly" into a repeatable checklist: observe, value-align,
 analyze, experiment, integrate, and — periodically — audit the loop itself. This
-repository is a portable Claude Code plugin implementation that preserves the
-functional coverage of [`hermes-esra`](https://github.com/rrpauls/hermes-esra) and
+repository is a portable Claude Code plugin implementation that maps the intended
+workflow coverage of [`hermes-esra`](https://github.com/rrpauls/hermes-esra) and
 follows the same consolidation approach as
 [`chatgpt-esra`](https://github.com/rrpauls/chatgpt-esra), while using Claude Code's own
 plugin manifest, skill discovery, hooks, and permission model end to end.
@@ -45,19 +46,19 @@ git clone https://github.com/rrpauls/claude-esra.git
 claude --plugin-dir ./claude-esra
 ```
 
-Once you're happy with it, validate and tag it, then install it the normal way (from a
-marketplace you publish it to, or directly by path/URL — see Claude Code's own
-[plugin docs](https://code.claude.com/docs/en/plugins) for current install flows, since
-that mechanism is Claude Code's, not this plugin's, and can change):
+Once you're happy with it, validate it and publish it through a Claude Code
+plugin marketplace. See Claude Code's current
+[plugin docs](https://code.claude.com/docs/en/plugins) because distribution is
+owned by Claude Code and can change:
 
 ```bash
-claude plugin validate ./claude-esra --strict
+claude plugin validate --strict ./claude-esra
 claude plugin install claude-esra@your-marketplace
 ```
 
 **Review the hook before enabling this in a shared or project scope.** Claude Code
 requires reviewing/trusting non-managed plugin hooks; run `/hooks` inside a session to
-inspect what `hooks/hooks.json` registers, or read `scripts/esra_hook.py` — it is under
+inspect what `hooks/hooks.json` registers, or read `scripts/esra_hook.py` — it is
 80 lines and does nothing beyond writing one privacy-preserving JSON line per lifecycle
 event.
 
@@ -78,7 +79,7 @@ event.
 
 ## Development
 
-Python 3.9+ (no third-party dependency required for `scripts/`; `pytest` is an optional
+Python 3.10+ (no third-party dependency required for `scripts/`; `pytest` is an optional
 convenience for `tests/`).
 
 ```bash
