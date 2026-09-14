@@ -10,6 +10,7 @@ its own.
 [ESRA specification](https://github.com/rrpauls/esra) ·
 [Hermes implementation](https://github.com/rrpauls/hermes-esra) ·
 [OpenAI/Codex implementation](https://github.com/rrpauls/chatgpt-esra) ·
+[Installation](INSTALL.md) ·
 [Hermes parity](docs/HERMES_PARITY.md) · [Runtime guide](docs/RUNTIME.md) ·
 [Compatibility matrix](https://github.com/rrpauls/esra/blob/main/conformance/compatibility-matrix.json) ·
 [Apache-2.0 License](LICENSE)
@@ -39,6 +40,16 @@ the specific adaptations this port makes for Claude Code's plugin model, and
 
 ## Install
 
+Download the release ZIP and load it directly in Claude Code 2.1.128 or newer:
+
+```bash
+claude --plugin-url https://github.com/rrpauls/claude-esra/releases/download/v0.3.0/claude-esra-v0.3.0.zip
+```
+
+See [`INSTALL.md`](INSTALL.md) for local ZIP and development-checkout options.
+
+### Local development
+
 Local development / testing, without a marketplace:
 
 ```bash
@@ -46,10 +57,9 @@ git clone https://github.com/rrpauls/claude-esra.git
 claude --plugin-dir ./claude-esra
 ```
 
-Once you're happy with it, validate it and publish it through a Claude Code
-plugin marketplace. See Claude Code's current
-[plugin docs](https://code.claude.com/docs/en/plugins) because distribution is
-owned by Claude Code and can change:
+For persistent managed distribution, validate and publish it through a Claude Code
+plugin marketplace. See Claude Code's current [plugin docs](https://code.claude.com/docs/en/plugins)
+because distribution is owned by Claude Code and can change:
 
 ```bash
 claude plugin validate --strict ./claude-esra

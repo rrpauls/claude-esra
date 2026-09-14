@@ -20,7 +20,8 @@
    description, it feeds one.
 7. Before publishing a release, run `claude plugin validate ./claude-esra --strict`
    (requires a local Claude Code install) to catch manifest and frontmatter issues the
-   test suite here can't see.
+   test suite here can't see. Then build the deterministic asset with
+   `python3 scripts/build_installer.py` and validate an extracted copy.
 
 Details and phase plan, once one exists, belong in `ROADMAP.md`.
 
