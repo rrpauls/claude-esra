@@ -8,12 +8,17 @@ ever auto-executing a cycle, auto-promoting an experiment, or touching git/GitHu
 its own.
 
 [ESRA specification](https://github.com/rrpauls/esra) ·
+[Universal implementation](https://github.com/rrpauls/esra-agents) ·
 [Hermes implementation](https://github.com/rrpauls/hermes-esra) ·
 [OpenAI/Codex implementation](https://github.com/rrpauls/chatgpt-esra) ·
 [Installation](INSTALL.md) ·
 [Hermes parity](docs/HERMES_PARITY.md) · [Runtime guide](docs/RUNTIME.md) ·
 [Compatibility matrix](https://github.com/rrpauls/esra/blob/main/conformance/compatibility-matrix.json) ·
 [Apache-2.0 License](LICENSE)
+
+> **Migration status:** the canonical portable skills and shared runtime now live in
+> [`esra-agents`](https://github.com/rrpauls/esra-agents). This repository remains
+> available for the existing Claude-specific release during the transition.
 
 ## What this is
 
